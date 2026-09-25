@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Inter';
+}
+
+:root {
+    /*As cores do site*/
+    --corBgBody: #202436;
+    --titulosMain: #81DADD;
+    --corHr: #57CBE5;
+    --sombraHr: rgb(60, 110, 175);
+    --corBgfoto: radial-gradient(rgba(97, 231, 255, 0.3), rgba(32, 36, 54, 0));
+    --corSombraFoto: rgba(97, 231, 255, 0.3);
+    --corBgRotulos: var(--corHr);
+    --corBordaRotulos: #141414f5;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--corBgBody);
+    width: 100vw;
+    height: 600vh;
+    display: grid;
+    grid: repeat(4, 1fr) / 100%;
+    gap: 50rem;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid: 100% / repeat(2, 1fr);
+    gap: 4rem;
+
+    #titulo {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        margin-left: 10%;
+
+        h2 {
+            color: var(--titulosMain);
+            font-size: 2.67rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+                color: var(--titulosMain);
+            }
+
+        }
+
+        h1 {
+            width: 100%;
+            height: 25%;
+
+            display: grid;
+            grid: repeat(2, 1fr) / 1fr;
+            gap: 0;
+
+            font-family: 'Holtwood One SC';
+            font-size: 4.5rem;
+
+            span {
+                font-family: 'Holtwood One SC';
+                color: transparent;
+                -webkit-text-stroke: 0.5px var(--titulosMain);
+            }
+        }
+
+        hr {
+            width: 100%;
+            border: solid 2px var(--corHr);
+            height: 2px;
+            opacity: 100%;
+
+            box-shadow: 15px 15px 15px var(--sombraHr);
+        }
+    }
+
+    #imgPrincipal {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        justify-items: center;
+        position: relative;
+
+        #bordaCircular {
+            width: 50%;
+            height: 25vw;
+            border: solid 7px #141414f5;
+            border-radius: 50%;
+            background-image: var(--corBgfoto);
+            box-shadow: 15px 15px 15px rgba(97, 231, 255, 0.3);
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            animation: flutuarImagem 3s infinite alternate;
+
+            img {
+                width: 90%;
+                height: 90%;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: bottom;
+                filter: brightness(110%);
+                transform: translate(5%, 5%);
+            }
+        }
+    }
+
+}
+
+@keyframes flutuarImagem {
+    to {
+        transform: translate(-50%, -50%) translateY(15px) translateX(15px);
+    }
+
+    from {
+        transform: translate(-50%, -50%) translateY(-15px) translateX(-15px);
+    }
+}
+
+.rotulo {
+    background: var(--corBgRotulos);
+    border: solid 5px var(--corBordaRotulos);
+    width: 90%;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--corBordaRotulos);
+}
+
+.cartao {
+    width: 100%;
+    height: 100%;
+    background-image: var(--corBgfoto);
+    box-shadow: 15px 15px 15px var(--corSombraFoto);
+    border-radius: 25%;
+    border: solid 3px #141414f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec01 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid: 100% / 60% 40%;
+    gap: 0 5rem;
+
+    #sobreMim {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        justify-items: center;
+
+        h1 {
+            justify-self: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        #cardSobreMim {
+            width: 100%;
+            height: 100%;
+
+            font-size: 2.5rem;
+
+            p {
+                width: 70%;
+                text-align: left;
+            }
+        }
+    }
+
+
+    #carrosselSkills {
+        width: 100%;
+        height: 60%;
+        align-content: center;
+        justify-items: center;
+        align-self: flex-end;
+
+        #rotuloSkills {
+            justify-self: flex-end;
+            margin-bottom: 2rem;
+        }
+
+        #carouselExampleIndicators {
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            justify-items: center;
+
+            .carousel-inner {
+                width: 100%;
+                height: 100%;
+                align-content: center;
+                justify-items: center;
+
+                .carousel-item {
+                    width: 100%;
+                    height: 100%;
+                    align-content: center;
+                    justify-items: center;
+
+                    #cardSkills {
+                        width: 80%;
+                        height: 100%;
+                        align-content: center;
+                        justify-items: center;
+                        font-size: 2.5rem;
+                        box-shadow: none;
+
+                        ul {
+                            width: 100%;
+                            height: 100%;
+                            align-content: center;
+
+                            li {
+                                width: 70%;
+                                justify-self: center;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#sec02 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid: 20% 80% / 100%;
+
+    h1 {
+        width: 100%;
+    }
+
+    #carouselExampleIndicators {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        justify-items: center;
+
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            justify-items: center;
+
+            .carousel-item {
+                width: 100%;
+                height: 100%;
+                align-content: center;
+                justify-items: center;
+
+                .cartaoProjeto {
+                    width: 50%;
+                    height: 100%;
+
+                    display: grid;
+                    grid: 10% 40% 40% 10% / 100%;
+                    align-content: center;
+                    justify-items: center;
+                    gap: 0;
+
+                    .nomeProjeto {
+                        font-size: 3.5rem;
+                        margin-top: 2rem;
+                    }
+
+                    .capTela {
+                        width: 50%;
+                        height: 100%;
+                    }
+
+                    .pDescricao {
+                        font-size: 2rem;
+                        text-align: center;
+                    }
+
+                    .pagProjeto {
+                        align-self: baseline;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
