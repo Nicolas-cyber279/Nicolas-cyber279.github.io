@@ -15,6 +15,7 @@
     --corSombraFoto: rgba(97, 231, 255, 0.3);
     --corBgRotulos: var(--corHr);
     --corBordaRotulos: #141414f5;
+    --corRodape: #114c6e;
 }
 
 html {
@@ -66,7 +67,7 @@ main {
             gap: 0;
 
             font-family: 'Holtwood One SC';
-            font-size: 4.5rem;
+            font-size: 5.4rem;
 
             span {
                 font-family: 'Holtwood One SC';
@@ -195,12 +196,13 @@ main {
         height: 100%;
         align-content: flex-end;
         justify-items: center;
+        padding-bottom: 20%;
 
         #rotuloSkills {
             justify-self: flex-end;
         }
 
-        #carouselExampleIndicators {
+        #carouselExampleIndicators1 {
             width: 70%;
             height: 40%;
             align-content: center;
@@ -254,11 +256,12 @@ main {
         width: 100%;
     }
 
-    #carouselExampleIndicators {
+    #carouselExampleIndicators2 {
         width: 100%;
         height: 70%;
         align-content: center;
         justify-items: center;
+        display: flex;
 
         .carousel-inner {
             width: 100%;
@@ -282,6 +285,8 @@ main {
                     justify-items: center;
                     gap: 0;
 
+                    box-shadow: none;
+
                     .nomeProjeto {
                         font-size: 3.5rem;
                         margin-top: 2rem;
@@ -303,6 +308,96 @@ main {
                     }
                 }
             }
+        }
+
+        .carousel-control-prev {
+            border: solid 2px var(--corHr);
+            height: 30%;
+            width: 5%;
+
+            align-self: center;
+            margin-left: 10%;
+        }
+
+        .carousel-control-next {
+            border: solid 2px var(--corHr);
+            height: 30%;
+            width: 5%;
+
+            align-self: center;
+            margin-right: 10%;
+        }
+    }
+}
+
+#rodape {
+    height: 70%;
+    align-self: flex-end;
+
+    display: grid;
+    grid: 1fr 5fr 1fr / 100%;
+
+    h1 {
+        width: 20%;
+        height: 90%;
+        background: var(--corBgRotulos);
+        border: solid 5px var(--corBordaRotulos);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: transparent;
+        -webkit-text-stroke: 3px var(--corBordaRotulos);
+    }
+
+    form {
+        width: 35%;
+        height: 100%;
+        justify-self: center;
+        display: grid;
+        grid: repeat(3, 1fr) 4fr 1fr / 100%;
+        border: solid 5px var(--corRodape);
+        border-radius: 0;
+
+        font-size: 2rem;
+
+        div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px;
+
+            input {
+                color: var(--corBordaRotulos);
+            }
+            #inpMensagem {
+                height: 100%;
+            }
+        }
+
+        button {
+            width: 80%;
+            background-color: var(--corBordaRotulos);
+            justify-self: center;
+            border-radius: 5%;
+        }
+    }
+
+    #linksRodape {
+        background-color: var(--corHr);
+        display: grid;
+        grid: 100% / repeat(3, 1fr);
+
+        align-items: center;
+        justify-items: center;
+
+        a {
+            font-size: 2rem;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--corBordaRotulos);
+            text-decoration: none;
         }
     }
 }
