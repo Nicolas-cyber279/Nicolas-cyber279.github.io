@@ -24,11 +24,6 @@ addEventListener('pointermove', evento => {
     requestAnimationFrame(f);
 })();
 
-cursor.classList.toggle('big', !!evento.target.closest('a, .cd,.pj'))
-
-
-
-
 function FormatarTelefone() {
 
     const inputTel = document.getElementById("inpTel");
