@@ -30,6 +30,45 @@ body {
     height: 600vh;
     gap: 0;
 }
+/* <--------------------------------------------- Area Cursor ---------------------------------------------> */
+#cursor {
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    margin: -18px 0 0 -18px;
+    border-radius: 50%;
+    border: solid 2px var(--corHr);
+
+    transition: 0.25s;
+
+    .big {
+        width: 64px;
+        height: 64px;
+        margin: -32px 0 0 -32px;
+    }
+    
+    :hover {
+        box-shadow: 0 15px 36px -10px var(--corSombraFoto);
+    }
+
+    .pontoFlutuante {
+        transition: transform.25s, background .25s;
+
+        :hover {
+            transform: scale(1.08);
+            background: var(--corRodape);
+        }
+    }
+}
+@media(pointer:coarse) {
+    #cursor {
+        display: none;
+    }
+}
+/* <--------------------------------------------- FIM Area Cursor ---------------------------------------------> */
 
 main {
     width: 100%;
@@ -125,11 +164,11 @@ main {
 
 @keyframes flutuarImagem {
     to {
-        transform: translate(-50%, -50%) translateY(15px) translateX(15px);
+        transform: translate(-50%, -50%) translateY(25px) translateX(25px);
     }
 
     from {
-        transform: translate(-50%, -50%) translateY(-15px) translateX(-15px);
+        transform: translate(-50%, -50%) translateY(-25px) translateX(-25px);
     }
 }
 
@@ -373,10 +412,12 @@ main {
             input {
                 color: var(--corBordaRotulos);
             }
+
             #inpMensagem {
                 height: 100%;
             }
         }
+
         :nth-child(4) {
             height: 50%;
         }
@@ -390,12 +431,14 @@ main {
     }
 
     #linksRodape {
-        background-color: var(--corHr);
         display: grid;
         grid: 100% / repeat(3, 1fr);
 
         align-items: center;
         justify-items: center;
+
+        border-radius: 0;
+        box-shadow: 0;
 
         a {
             font-size: 2rem;

@@ -1,3 +1,34 @@
+const cursor = document.getElementById("cursor");
+let x = 0;
+let y = 0;
+let targetX = 0;
+let targetY = 0;
+
+addEventListener('pointermove', evento => {
+    targetX = evento.clientX;
+    targetY = evento.clientY;
+
+    cursor.style.opacity = 1;
+    cursor.classlist.toggle(
+        'big',
+        !!evento.target.closest('a,.cd,.pj')
+    );
+});
+
+(function f() {
+    x += (targetX - x);
+    y += (targetY - y);
+
+    cursor.style.transform = `translate(${x}px, ${y}px)`;
+
+    requestAnimationFrame(f);
+})();
+
+cursor.classList.toggle('big', !!evento.target.closest('a, .cd,.pj'))
+
+
+
+
 function FormatarTelefone() {
 
     const inputTel = document.getElementById("inpTel");
