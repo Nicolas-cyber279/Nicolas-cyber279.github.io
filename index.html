@@ -115,7 +115,7 @@
                                 <li>Formulários Google</li>
                                 <li>Inglês</li>
                                 <li>Espanhol</li>
-                                
+
                             </ul>
                         </div>
 
@@ -169,11 +169,14 @@
                 <div class="carousel-item active">
 
                     <div class="cartao cartaoProjeto">
-                        <h3 class="nomeProjeto">Nome do projeto</h3>
-                        <div class="capTela"></div>
-                        <p class="pDescricao">Breve descrição do meu projeto, que pode incluir funcionalidades,
-                            dificuldades, história, etc;</p>
-                        <a href="" class="pagProjeto">Ver página de projeto</a>
+                        <h3 class="nomeProjeto">Calculadora C#</h3>
+                        <div class="capTela"><img src="images/capTelaCalc.png" alt="Caputura de tela"></div>
+                        <p class="pDescricao">O WinFormCalculadora é um projeto desenvolvido para praticar conceitos de
+                            desenvolvimento de aplicações desktop com C# e Windows Forms.
+
+                            A aplicação possui uma interface gráfica simples e permite realizar operações matemáticas
+                            básicas diretamente pela calculadora.</p>
+                        <a href="https://github.com/Nicolas-cyber279/WinFormCalculadora" class="pagProjeto">Ver página de projeto</a>
                     </div>
 
                 </div>
@@ -243,10 +246,14 @@
         <h1 id="contato">Contato</h1>
 
         <form action="" class="cartao">
-            <div><label for="inpNome">Nome: </label><input type="text" placeholder="Seu nome completo..." id="inpNome"></div>
-            <div><label for="inpTel">Telefone: </label><input type="text" placeholder="(99) 9 9999-9999" id="inpTel" oninput="FormatarTelefone()" maxlength="21"></div>
-            <div><label for="inpEmail">Email: </label><input type="text" placeholder="email@exemplo.com" id="inpEmail"></div>
-            <div><label for="inpMensagem">Mensagem: </label><input type="text" placeholder="Sua mensagem..." id="inpMensagem"></div>
+            <div><label for="inpNome">Nome: </label><input type="text" placeholder="Seu nome completo..." id="inpNome">
+            </div>
+            <div><label for="inpTel">Telefone: </label><input type="text" placeholder="(99) 9 9999-9999" id="inpTel"
+                    oninput="FormatarTelefone()" maxlength="21"></div>
+            <div><label for="inpEmail">Email: </label><input type="text" placeholder="email@exemplo.com" id="inpEmail">
+            </div>
+            <div><label for="inpMensagem">Mensagem: </label><input type="text" placeholder="Sua mensagem..."
+                    id="inpMensagem"></div>
             <button onclick="EnviarFormulario()">Enviar</button>
         </form>
 
