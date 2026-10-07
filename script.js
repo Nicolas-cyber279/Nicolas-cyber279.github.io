@@ -11,13 +11,13 @@ addEventListener('pointermove', evento => {
     cursor.style.opacity = 1;
     cursor.classlist.toggle(
         'big',
-        !!evento.target.closest('a,.cd,.pj')
+        !!evento.target.closest('a')
     );
 });
 
 (function f() {
-    x += (targetX - x);
-    y += (targetY - y);
+    x = targetX;
+    y = targetY;
 
     cursor.style.transform = `translate(${x}px, ${y}px)`;
 
