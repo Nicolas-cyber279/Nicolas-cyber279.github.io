@@ -75,9 +75,9 @@ function EnviarFormulario() {
         document.getElementById("inpTel").value = "";
         document.getElementById("inpEmail").value = "";
         document.getElementById("inpMensagem").value = "";
-        alert("Formulário limpo!");
+        window.alert("Formulário limpo!");
     }
     else {
-        alert("Email inválido! Por favor, insira um email válido.");
+        window.alert("Email inválido! Por favor, insira um email válido.");
     }
 }
