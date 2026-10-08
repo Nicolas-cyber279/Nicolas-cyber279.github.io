@@ -49,7 +49,7 @@ body {
     }
 
     .pontoFlutuante {
-        transition: transform.25s, background .25s;
+        transition: transform.25s, background.25s;
 
         :hover {
             transform: scale(1.08);
@@ -318,7 +318,8 @@ main {
                     align-content: center;
                     justify-items: center;
                     gap: 0;
-
+                    
+                    overflow: hidden;
                     box-shadow: none;
 
                     .nomeProjeto {
