@@ -7,20 +7,13 @@ let targetY = 0;
 addEventListener('pointermove', evento => {
     targetX = evento.clientX;
     targetY = evento.clientY;
-
     cursor.style.opacity = 1;
-    cursor.classlist.toggle(
-        'big',
-        !!evento.target.closest('a')
-    );
 });
 
 (function f() {
     x = targetX;
     y = targetY;
-
     cursor.style.transform = `translate(${x}px, ${y}px)`;
-
     requestAnimationFrame(f);
 })();
 
