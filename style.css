@@ -6,7 +6,7 @@
 }
 
 :root {
-    /*As cores do site*/
+    /*As cores do site (Modo Escuro)*/
     --corBgBody: #202436;
     --titulosMain: #81DADD;
     --corHr: #57CBE5;
@@ -16,6 +16,21 @@
     --corBgRotulos: var(--corHr);
     --corBordaRotulos: #141414f5;
     --corRodape: #114c6e;
+    --contorno: 0.5px var(--titulosMain);
+    --corPagProjeto: #3ab4cf;
+}
+.claro {
+    /*As cores do site (Modo Claro)*/
+    --corBgBody: #5d6aa7;
+    --titulosMain: #0d0d0e;
+    --corHr: #273b3f;
+    --sombraHr: rgb(21, 29, 41);
+    --corSombraFoto: rgba(97, 231, 255, 0.3);
+    --corBgRotulos: #0296b8;
+    --corBordaRotulos: #141414f5;
+    --corRodape: #3692c7;
+    --contorno: 2px #4db1c7;
+    --corPagProjeto: #04232b;
 }
 
 html {
@@ -76,9 +91,21 @@ main {
     #titulo {
         width: 100%;
         height: 100%;
-        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         padding-left: 5%;
         padding-right: 5%;
+
+        #alternar {
+            width: 40%;
+            height: 5%;
+            background-color: var(--sombraHr);
+            border-radius: 30%;
+            font-size: 1.5rem;
+            justify-self: first baseline;
+            margin-bottom: 2rem;
+        }
 
         h2 {
             color: var(--titulosMain);
@@ -109,7 +136,7 @@ main {
             span {
                 font-family: 'Holtwood One SC';
                 color: transparent;
-                -webkit-text-stroke: 0.5px var(--titulosMain);
+                -webkit-text-stroke: var(--contorno);
             }
         }
 
@@ -348,9 +375,10 @@ main {
                         text-align: center;
                     }
 
-                    .pagProjeto {
+                    a.pagProjeto {
                         align-self: baseline;
                         font-size: 1.5rem;
+                        color: var(--corPagProjeto);
                     }
                 }
             }

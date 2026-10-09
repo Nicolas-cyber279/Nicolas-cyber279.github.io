@@ -74,3 +74,16 @@ function EnviarFormulario() {
         window.alert("Email inválido! Por favor, insira um email válido.");
     }
 }
+
+function AlternarTema() {
+    const body = document.body;
+    const button = document.getElementById("alternar");
+    body.classList.toggle("claro");
+
+    if (body.classList.contains("claro")) {
+        button.textContent = "Modo Escuro";
+    }
+    else {
+        button.textContent = "Modo Claro";
+    }
+}
