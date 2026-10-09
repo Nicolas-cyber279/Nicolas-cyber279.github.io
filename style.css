@@ -30,6 +30,7 @@ body {
     height: 600vh;
     gap: 0;
 }
+
 /* <--------------------------------------------- Area Cursor ---------------------------------------------> */
 #cursor {
     width: 36px;
@@ -43,7 +44,7 @@ body {
     border: solid 2px var(--corHr);
 
     transition: 0.25s;
-    
+
     :hover {
         box-shadow: 0 15px 36px -10px var(--corSombraFoto);
     }
@@ -57,11 +58,13 @@ body {
         }
     }
 }
+
 @media(pointer:coarse) {
     #cursor {
         display: none;
     }
 }
+
 /* <--------------------------------------------- FIM Area Cursor ---------------------------------------------> */
 
 main {
@@ -318,7 +321,7 @@ main {
                     align-content: center;
                     justify-items: center;
                     gap: 0;
-                    
+
                     overflow: hidden;
                     box-shadow: none;
 
@@ -332,7 +335,7 @@ main {
                         height: 100%;
                         display: flex;
                         justify-content: center;
-                        
+
                         img {
                             width: 100%;
                             height: 100%;
@@ -448,6 +451,305 @@ main {
             color: transparent;
             -webkit-text-stroke: 1px var(--corBordaRotulos);
             text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        #titulo {
+            h1 {
+                font-size: clamp(3.6rem, 6vw, 5rem);
+            }
+        }
+
+        #imgPrincipal {
+            #bordaCircular {
+                width: min(72%, 34rem);
+                height: auto;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+    #sec01 {
+        grid-template-columns: 55% 45%;
+
+        #sobreMim {
+            #cardSobreMim {
+                width: 85%;
+                height: 75%;
+                font-size: 2rem;
+
+                p {
+                    width: 85%;
+                }
+            }
+        }
+
+        #carrosselSkills {
+            #carouselExampleIndicators1 {
+                width: 85%;
+            }
+        }
+    }
+
+    #sec02 {
+        #carouselExampleIndicators2 {
+            .carousel-inner {
+                .carousel-item {
+                    .cartaoProjeto {
+                        width: 65%;
+
+                        .nomeProjeto {
+                            font-size: 2.8rem;
+                        }
+
+                        .pDescricao {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #rodape {
+        h1 {
+            width: 30%;
+        }
+
+        form {
+            width: 55%;
+        }
+    }
+}
+
+@media (max-width: 712.5px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        grid-template-rows: repeat(4, minmax(100svh, auto));
+    }
+
+    main {
+        height: auto;
+        min-height: 100svh;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(45svh, auto) minmax(40svh, auto);
+
+        #titulo {
+            padding: 4rem 7%;
+
+            h2 {
+                font-size: clamp(1.8rem, 5vw, 2.67rem);
+                gap: 1rem;
+            }
+
+            h1 {
+                height: auto;
+                min-height: 12rem;
+                font-size: clamp(3.2rem, 9vw, 5rem);
+            }
+        }
+
+        #imgPrincipal {
+            min-height: 40svh;
+
+            #bordaCircular {
+                width: min(62vw, 30rem);
+                height: auto;
+                aspect-ratio: 1;
+                border-width: 5px;
+            }
+        }
+    }
+
+    .rotulo {
+        width: 92%;
+        height: auto;
+        min-height: 8rem;
+        padding: 1rem;
+        font-size: clamp(3.6rem, 12vw, 7rem);
+        -webkit-text-stroke-width: 2px;
+    }
+
+    #sec01 {
+        height: auto;
+        min-height: 100svh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 3rem;
+
+        #sobreMim {
+            height: auto;
+            min-height: 55svh;
+            grid-template-rows: auto 1fr;
+            padding: 3rem 0;
+
+            #cardSobreMim {
+                width: 88%;
+                height: auto;
+                min-height: 28rem;
+                padding: 2rem;
+                border-radius: 2rem;
+                font-size: 1.8rem;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        #carrosselSkills {
+            height: auto;
+            min-height: 45svh;
+            padding: 0 0 3rem;
+
+            #rotuloSkills {
+                justify-self: center;
+            }
+
+            #carouselExampleIndicators1 {
+                width: 90%;
+                height: auto;
+                min-height: 30rem;
+
+                .carousel-inner {
+                    .carousel-item {
+                        #cardSkills {
+                            width: 88%;
+                            min-height: 28rem;
+                            padding: 1.5rem;
+                            font-size: 1.8rem;
+
+                            ul {
+                                li {
+                                    width: 90%;
+                                    margin-bottom: 0.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #sec02 {
+        height: auto;
+        min-height: 100svh;
+        grid-template-rows: auto minmax(65svh, auto);
+        padding: 3rem 0;
+
+        #carouselExampleIndicators2 {
+            height: auto;
+            min-height: 60svh;
+
+            .carousel-inner {
+                .carousel-item {
+                    .cartaoProjeto {
+                        width: 76%;
+                        height: auto;
+                        min-height: 52rem;
+                        grid-template-rows: auto minmax(18rem, 1fr) auto auto;
+                        gap: 1rem;
+                        padding: 1rem;
+
+                        .nomeProjeto {
+                            margin-top: 1rem;
+                            font-size: clamp(2.2rem, 7vw, 3.2rem);
+                            text-align: center;
+                        }
+
+                        .pDescricao {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            .carousel-control-prev {
+                width: 9%;
+                height: 22%;
+                margin-left: 1%;
+            }
+
+            .carousel-control-next {
+                width: 9%;
+                height: 22%;
+                margin-right: 1%;
+            }
+        }
+    }
+
+    #rodape {
+        height: auto;
+        min-height: 100svh;
+        grid-template-rows: auto 1fr auto;
+        gap: 2rem;
+        padding: 3rem 0 1rem;
+
+        h1 {
+            width: 90%;
+            min-height: 7rem;
+            justify-self: center;
+            font-size: clamp(3.2rem, 10vw, 5rem);
+        }
+
+        form {
+            width: min(90%, 55rem);
+            height: auto;
+            min-height: 45rem;
+            grid-template-rows: repeat(3, auto) minmax(12rem, 1fr) auto;
+            gap: 1rem;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+
+            div {
+                min-height: 4rem;
+                flex-wrap: wrap;
+                gap: 0.8rem;
+                align-items: center;
+            }
+
+            :nth-child(4) {
+                height: auto;
+            }
+
+            button {
+                min-height: 4.4rem;
+            }
+        }
+
+        #linksRodape {
+            min-height: 7rem;
+
+            a {
+                font-size: clamp(1.4rem, 4vw, 1.8rem);
+            }
+        }
+    }
+
+    body {
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        h5 {
+            font-size: 1.6rem;
+        }
+
+        h6 {
+            font-size: 1.4rem;
+        }
+
+        button {
+            font-size: 1.4rem;
         }
     }
 }
